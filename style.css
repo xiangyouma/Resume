@@ -81,9 +81,9 @@ h1, h2, h3 {
     display: inline-block;
     padding: 5px 10px;
     margin: 5px;
-    background: #764ba2;
+    background: #7d7d7d;
     border-radius: 10px;
-    color: #666666;
+    color: #ffffff;
 }
 
 
@@ -116,7 +116,7 @@ h1, h2, h3 {
     left: 0;
     top: 0;
     background: #4caf50;
-    color: #666666;
+    color: #ffffff;
     padding: 5px 12px;
     border-radius: 20px;
     font-weight: bold;
@@ -128,9 +128,9 @@ h1, h2, h3 {
 .timeline-text {
     display: block;
     padding: 10px 15px;
-    background: #764ba2;
+    background: #7d7d7d;
     border-radius: 8px;
-    color: #666666;
+    color: #ffffff;
     border-left: 4px solid #4caf50;
     word-wrap: break-word;
 }
@@ -143,7 +143,7 @@ h1, h2, h3 {
     border: 1px solid #666;
     border-radius: 10px;
     transition: transform 0.2s ease;
-    color: #666666;
+    color: #ffffff;
 }
 
 .card h3 {
@@ -151,7 +151,7 @@ h1, h2, h3 {
 }
 
 .card a {
-    color: #666666;
+    color: #ffffff;
     text-decoration: none;
     background: #667eea;
     padding: 8px 15px;
@@ -302,11 +302,11 @@ h1, h2, h3 {
 }
 
 .learning-card {
-    background: #fff6f6;
+    background: #7d7d7d;
     padding: 20px;
     border-radius: 10px;
     border-left: 4px solid #667eea;
-    color: #666666;
+    color: #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -317,7 +317,7 @@ h1, h2, h3 {
 
 .learning-card h3 {
     margin: 0 0 10px 0;
-    color: #666666;
+    color: #ffffff;
     font-size: 1.2rem;
 }
 
