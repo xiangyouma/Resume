@@ -64,18 +64,15 @@ h1, h2, h3 {
 }
 
 
-/* 技能進度條 */
-.skill-bar {
-    margin-bottom: 15px;
-}
-.bar {
-    width: 100%;
-    height: 10px;
-    background: #ffffff;
-}
-.progress {
-    height: 10px;
-    background: #4caf50;
+
+/* 技能 B版標籤雲 */
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background: #7d7d7d;
+    border-radius: 10px;
+    color: #ffffff;
 }
 
 
