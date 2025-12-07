@@ -65,17 +65,52 @@ h1, h2, h3 {
 
 
 /* 技能進度條 */
+.skills-section {
+    background: #667eea !important;
+    padding: 30px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skills-section h2 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.skills-version {
+    max-width: 100%;
+}
+
 .skill-bar {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
+
+.skill-bar span {
+    min-width: 80px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
 .bar {
-    width: 100%;
-    height: 10px;
-    background: #ffffff;
+    flex: 1;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
 }
+
 .progress {
-    height: 10px;
-    background: #4caf50;
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #45a049);
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-bar:hover .progress {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -164,8 +199,12 @@ h1, h2, h3 {
     margin-bottom: 20px;
 }
 
-/* 平板和較小設備 */
+/* 平板設備 - 768px 以下 */
 @media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    
     .hero {
         padding: 20px 15px;
     }
@@ -178,6 +217,26 @@ h1, h2, h3 {
     
     .section {
         padding: 15px;
+        margin: 0 5px;
+    }
+    
+    .skills-section {
+        padding: 20px 15px !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin: 15px 0 10px 0;
+    }
+    
+    .skill-bar {
+        margin-bottom: 12px;
+        gap: 12px;
+    }
+    
+    .skill-bar span {
+        min-width: 70px;
+        font-size: 0.9rem;
     }
     
     .timeline::before {
@@ -200,87 +259,120 @@ h1, h2, h3 {
         padding: 8px 12px;
     }
     
-    .card {
-        margin: 10px 0;
-        padding: 12px;
+    .cards-container {
+        gap: 15px;
     }
     
-    h2 {
-        font-size: 1.5rem;
+    .card {
+        padding: 12px;
+        margin: 0;
+    }
+    
+    .card h3 {
+        font-size: 1.1rem;
     }
 }
 
-/* 手機設備 */
+/* 手機設備 - 480px 以下 */
 @media (max-width: 480px) {
     html {
-        font-size: 14px;
+        font-size: 13px;
+    }
+    
+    body {
+        line-height: 1.5;
     }
     
     .hero {
-        padding: 15px 10px;
-    }
-    
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    
-    .hero p {
-        font-size: 0.85rem;
-        margin: 3px 0;
-    }
-    
-    .profile-img {
-        width: min(120px, 50vw);
-        height: min(120px, 50vw);
-        border-width: 3px;
-        margin-bottom: 8px;
-    }
-    
-    .section {
         padding: 12px 10px;
     }
     
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 0.8rem;
+        margin: 2px 0;
+    }
+    
+    .profile-img {
+        width: min(100px, 50vw);
+        height: min(100px, 50vw);
+        border-width: 2px;
+        margin-bottom: 5px;
+    }
+    
+    .section {
+        padding: 12px 8px;
+        margin: 0;
+    }
+    
+    .skills-section {
+        padding: 15px 10px !important;
+    }
+    
     h2 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+        margin: 10px 0 8px 0;
+    }
+    
+    .skill-bar {
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+    
+    .skill-bar span {
+        min-width: 60px;
+        font-size: 0.8rem;
+    }
+    
+    .bar {
+        height: 10px;
     }
     
     .timeline::before {
-        left: 12px;
+        left: 10px;
     }
     
     .timeline-item {
-        padding-left: 60px;
-        margin-bottom: 15px;
+        padding-left: 55px;
+        margin-bottom: 12px;
     }
     
     .timeline-year {
-        font-size: 11px;
-        padding: 2px 6px;
-        min-width: 50px;
+        font-size: 10px;
+        padding: 2px 5px;
+        min-width: 45px;
     }
     
     .timeline-text {
         font-size: 12px;
-        padding: 6px 10px;
+        padding: 5px 8px;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
     
     .card {
-        margin: 8px 0;
         padding: 10px;
+        margin: 0;
     }
     
     .card h3 {
-        font-size: 1rem;
-        margin: 5px 0;
+        font-size: 0.95rem;
+        margin: 3px 0;
     }
     
     .card p {
-        font-size: 0.9rem;
-        margin: 5px 0;
+        font-size: 0.85rem;
+        margin: 3px 0;
     }
     
     .card a {
-        font-size: 0.85rem;
-        padding: 6px 12px;
+        font-size: 0.8rem;
+        padding: 5px 10px;
     }
 }
